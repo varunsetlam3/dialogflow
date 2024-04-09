@@ -1,0 +1,14 @@
+{
+  "defaultLanguageCode": "en",
+  "timeZone": "America/New_York",
+  "projectNumber": 986362610714,
+  "startFlow": "Default Start Flow",
+  "advancedSettings": {
+    "loggingSettings": {
+    
+    }
+  },
+  "genAppBuilderSettings": {
+    "engine": "projects/986362610714/locations/global/collections/default_collection/engines/54879942-4c48-47bb-85a6-2259b825a241"
+  }
+}

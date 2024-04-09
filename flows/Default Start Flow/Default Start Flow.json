@@ -1,0 +1,90 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "74ec1e90-3602-449c-884a-2c56e7a9083a"
+  }, {
+    "intent": "What does ACTV mean?",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " ACTV - response from Conversational AI " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "a4a181be-aef8-466b-a435-447191758bf0"
+  }, {
+    "intent": "WebsiteFAQ",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "WebsiteFAQFlow",
+    "name": "e9345535-0e13-41a6-8fc6-7be1a6e4b708"
+  }, {
+    "intent": "View bill",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "View bill hardcoded response " ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "88c7c0d4-865e-40a1-bd16-b9cb190adeae"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "08e63198-a713-49ba-95ea-b9c7b0fef114"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "7bc0c594-b699-4fb8-b4e3-b7c13d074826"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "knowledgeConnectorSettings": {
+    "enabled": true,
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$request.knowledge.answers[0]" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "dataStoreConnections": [ {
+      "dataStoreType": "UNSTRUCTURED",
+      "dataStore": "projects/986362610714/locations/global/collections/default_collection/dataStores/coxfaq_1712337603345",
+      "languageCode": "en",
+      "documentProcessingMode": "DOCUMENTS"
+    } ]
+  }
+}
